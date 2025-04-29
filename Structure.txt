@@ -1,0 +1,87 @@
+book-translation-app/
+├── client/                     # Frontend React application
+│   ├── public/
+│   │   ├── index.html
+│   │   ├── favicon.ico
+│   │   └── manifest.json
+│   ├── src/
+│   │   ├── assets/             # Static assets (images, icons)
+│   │   ├── components/         # React components
+│   │   │   ├── common/         # Reusable UI components
+│   │   │   │   ├── Button.jsx
+│   │   │   │   ├── ProgressBar.jsx
+│   │   │   │   ├── Dropdown.jsx
+│   │   │   │   └── FileUpload.jsx
+│   │   │   ├── layout/         # Layout components
+│   │   │   │   ├── Header.jsx
+│   │   │   │   ├── Footer.jsx
+│   │   │   │   └── Sidebar.jsx
+│   │   │   └── pages/          # Page-specific components
+│   │   │       ├── Dashboard.jsx
+│   │   │       ├── Upload.jsx
+│   │   │       ├── Configure.jsx
+│   │   │       └── Download.jsx
+│   │   ├── contexts/           # React contexts for state management
+│   │   │   └── TranslationContext.jsx
+│   │   ├── hooks/              # Custom React hooks
+│   │   │   └── useTranslation.js
+│   │   ├── services/           # API service integrations
+│   │   │   ├── api.js          # API client setup
+│   │   │   ├── translationService.js
+│   │   │   ├── fileService.js
+│   │   │   └── authService.js
+│   │   ├── utils/              # Utility functions
+│   │   │   ├── fileUtils.js
+│   │   │   └── formatters.js
+│   │   ├── App.jsx             # Main application component
+│   │   ├── index.jsx           # Application entry point
+│   │   └── routes.js           # Application routes
+│   ├── package.json
+│   ├── tailwind.config.js      # Tailwind CSS configuration
+│   └── vite.config.js          # Vite build configuration
+├── server/                     # Backend Node.js application
+│   ├── src/
+│   │   ├── config/             # Configuration files
+│   │   │   ├── database.js
+│   │   │   └── services.js
+│   │   ├── controllers/        # API route controllers
+│   │   │   ├── translationController.js
+│   │   │   └── userController.js
+│   │   ├── middleware/         # Express middleware
+│   │   │   ├── auth.js
+│   │   │   └── errorHandler.js
+│   │   ├── models/             # Database models
+│   │   │   ├── User.js
+│   │   │   └── Translation.js
+│   │   ├── routes/             # API routes
+│   │   │   ├── translationRoutes.js
+│   │   │   └── userRoutes.js
+│   │   ├── services/           # Business logic services
+│   │   │   ├── translationService.js
+│   │   │   ├── deepl.js
+│   │   │   ├── microsoft.js
+│   │   │   ├── amazon.js
+│   │   │   ├── argos.js
+│   │   │   └── libre.js
+│   │   ├── utils/              # Utility functions
+│   │   │   ├── fileProcessing.js
+│   │   │   └── logger.js
+│   │   └── index.js            # Server entry point
+│   ├── package.json
+│   └── .env.example            # Example environment variables
+├── translations/               # Translation storage directory
+│   ├── temp/                   # Temporary file storage
+│   └── completed/              # Completed translations
+├── docker/                     # Docker configuration
+│   ├── Dockerfile.client
+│   ├── Dockerfile.server
+│   └── docker-compose.yml
+├── .github/                    # GitHub CI/CD workflows
+│   └── workflows/
+│       └── deploy.yml
+├── scripts/                    # Utility scripts
+│   ├── setup.sh
+│   └── deploy.sh
+├── package.json                # Root package.json for workspaces
+├── README.md
+└── LICENSE
